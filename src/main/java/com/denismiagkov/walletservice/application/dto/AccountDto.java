@@ -1,15 +1,15 @@
 package com.denismiagkov.walletservice.application.dto;
 
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-
 import java.math.BigDecimal;
 
-@JsonPropertyOrder({"name", "surname", "number", "balance"})
 public class AccountDto {
     public String name;
     public String surname;
     public String number;
     public BigDecimal balance;
+
+    public AccountDto() {
+    }
 
     public String getName() {
         return name;
@@ -39,7 +39,7 @@ public class AccountDto {
         return balance;
     }
 
-    public void setAmount(BigDecimal balance) {
+    public void setBalance(BigDecimal balance) {
         this.balance = balance;
     }
 
